@@ -11,8 +11,6 @@ local Table1 = {}
 --Utility
 local function checkTable(tbl)
 	local isEmpty = next(tbl) == nil
-
-
 	if isEmpty then
 		return nil
 	else
@@ -41,7 +39,6 @@ function System.New(Model : Model)
 	self.Radar = Model
 	return self
 end
-
 
 function System:Init()--
 	self:FindTarget()
@@ -107,9 +104,7 @@ function System:Debug(Part, hitPosition, raycast)--Debug the Raycast System
 		part.CanCollide = false
 		part.CanTouch = false
 		part.Material = Enum.Material.Neon
-		game:GetService("Debris"):AddItem(part, 0.01)
-	else
-		
+		game:GetService("Debris"):AddItem(part, 0.01)	
 	end
 end
 
